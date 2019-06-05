@@ -1,0 +1,24 @@
+def getTotalX(a, b):
+    l = []
+    t = []
+    for n in range(1,101):
+        for j in range(len(a)):
+            if n>= max(a) and n%a[j] == 0:
+                if a[j]==a[-1]:
+                    t.append(n)
+                else:
+                    continue
+            else:
+                break
+
+    for i in range(len(t)):
+        for j in range(len(b)):
+            if b[j]%t[i]==0: 
+                if b[j]==b[-1]:     
+                    l.append(t[i]) 
+                else:
+                    continue
+            else:
+                break      
+    x = len(l)
+    return x
