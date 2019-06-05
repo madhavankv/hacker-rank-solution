@@ -1,9 +1,3 @@
-import math
-import os
-import random
-import re
-import sys
-
 def formingMagicSquare(s):
     r=[]
     l1=[4,9,2],[3,5,7],[8,1,6]
@@ -83,16 +77,4 @@ def formingMagicSquare(s):
         r.append(cost)
         c= min(r)
         return c
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    s = []
-
-    for _ in range(3):
-        s.append(list(map(int, input().rstrip().split())))
-
-    result = formingMagicSquare(s)
-
-    fptr.write(str(result) + '\n')
-
-    fptr.close()
