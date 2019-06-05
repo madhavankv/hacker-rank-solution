@@ -1,0 +1,20 @@
+def plusMinus(arr):
+    pcount = 0
+    ncount = 0
+    zcount = 0
+    for i in arr:
+        if i>0:
+            pcount = pcount+1
+        elif i<0:
+            ncount = ncount+1
+        else:
+            zcount= zcount + 1
+    dpcount = pcount/len(arr)
+    dncount = ncount/len(arr)
+    dzcount = zcount/len(arr)
+    dp = format(dpcount,'.6f')
+    dn = format(dncount,'.6f')
+    dz = format(dzcount,'.6f')
+    print(dp)
+    print(dn)
+    print(dz)
