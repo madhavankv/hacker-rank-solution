@@ -1,0 +1,10 @@
+def bonAppetit(bill, k, b):
+    count = 0
+    for i in range(len(bill)):
+        count = count+bill[i]
+    count =count-bill[k]
+    d = count//2
+    if d != b:
+        print(b-d)
+    else:
+        print('Bon Appetit')  
