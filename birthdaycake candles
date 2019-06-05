@@ -1,0 +1,4 @@
+def birthdayCakeCandles(ar):
+    m = max(ar)
+    result = ar.count(m)
+    return result
