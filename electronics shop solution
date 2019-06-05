@@ -1,0 +1,15 @@
+def getMoneySpent(keyboards, drives, b):
+    k=keyboards
+    d=drives 
+    l=[]
+    k.sort(reverse=True)
+    d.sort(reverse = True)
+    for i in range(len(k)):
+        for j in range(len(d)):
+            c= k[i]+d[j]
+            if c<=b:
+                l.append(c)
+    if len(l)!=0:
+        return max(l)
+    else:
+        return -1
