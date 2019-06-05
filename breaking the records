@@ -1,0 +1,16 @@
+def breakingRecords(scores):
+    maxcount = 0
+    mincount = 0
+    a = scores
+    maxr = a[0]
+    minr = a[0]
+    for i in range(1,len(a)):
+        if a[i] > maxr:
+            maxcount = maxcount+1
+            maxr = a[i]
+        elif a[i] <  minr:
+            mincount = mincount+1
+            minr = a[i]
+        else:
+            continue
+    return maxcount,mincount  
