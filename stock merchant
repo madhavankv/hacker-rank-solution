@@ -1,0 +1,15 @@
+def sockMerchant(n, ar):
+    c = 0
+    ar.sort()
+    for i in range(len(ar)):
+        if i == 0 or ar[i-1] !=ar[i]:
+            m= ar.count(ar[i])
+            if m%2 == 0:
+                c = c+(m//2)
+            elif m%2 !=0 and m>2:
+                d = (m-1)//2
+                c = c+d
+            else:
+                continue
+    result = c
+    return result
