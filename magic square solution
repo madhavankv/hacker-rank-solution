@@ -1,0 +1,98 @@
+import math
+import os
+import random
+import re
+import sys
+
+def formingMagicSquare(s):
+    r=[]
+    l1=[4,9,2],[3,5,7],[8,1,6]
+    l2=[8,3,4],[1,5,9],[6,7,2]
+    l3=[6,1,8],[7,5,3],[2,9,4]
+    l4=[2,7,6],[9,5,1],[4,3,8]
+    l5=[2,9,4],[7,5,3],[6,1,8]
+    l6=[4,3,8],[9,5,1],[2,7,6]
+    l7=[8,1,6],[3,5,7],[4,9,2]
+    l8=[6,7,2],[1,5,9],[8,3,4]
+    if s==l1 or s==l2 or s==l3 or s==l4 or s==l5 or s==l6 or s==l7 or s==l8:
+        return 0
+    else:
+        cost = 0 
+        for i in range(len(s)):
+            for j in range(len(s)):
+                if s[i][j]==l1[i][j]:
+                    cost =cost+0
+                else:
+                    cost = cost+ abs(l1[i][j]-s[i][j])
+        r.append(cost)
+        cost = 0
+        for i in range(len(s)):
+            for j in range(len(s)):
+                if s[i][j]==l2[i][j]:
+                    cost =cost+0
+                else:
+                    cost = cost+ abs(l2[i][j]-s[i][j])
+        r.append(cost)
+        cost = 0
+        for i in range(len(s)):
+            for j in range(len(s)):
+                if s[i][j]==l3[i][j]:
+                    cost =cost+0
+                else:
+                    cost = cost+ abs(l3[i][j]-s[i][j])
+        r.append(cost)
+        cost = 0
+        for i in range(len(s)):
+            for j in range(len(s)):
+                if s[i][j]==l4[i][j]:
+                    cost =cost+0
+                else:
+                    cost = cost+ abs(l4[i][j]-s[i][j])
+        r.append(cost)
+        cost = 0
+        for i in range(len(s)):
+            for j in range(len(s)):
+                if s[i][j]==l5[i][j]:
+                    cost =cost+0
+                else:
+                    cost = cost+ abs(l5[i][j]-s[i][j])
+        r.append(cost)
+        cost = 0
+        for i in range(len(s)):
+            for j in range(len(s)):
+                if s[i][j]==l6[i][j]:
+                    cost =cost+0
+                else:
+                    cost = cost+ abs(l6[i][j]-s[i][j])
+        r.append(cost)
+        cost = 0
+        for i in range(len(s)):
+            for j in range(len(s)):
+                if s[i][j]==l7[i][j]:
+                    cost =cost+0
+                else:
+                    cost = cost+ abs(l7[i][j]-s[i][j])
+        r.append(cost)
+        cost = 0
+        for i in range(len(s)):
+            for j in range(len(s)):
+                if s[i][j]==l8[i][j]:
+                    cost =cost+0
+                else:
+                    cost = cost+ abs(l8[i][j]-s[i][j])
+        r.append(cost)
+        c= min(r)
+        return c
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = []
+
+    for _ in range(3):
+        s.append(list(map(int, input().rstrip().split())))
+
+    result = formingMagicSquare(s)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
