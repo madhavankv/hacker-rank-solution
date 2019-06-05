@@ -1,0 +1,34 @@
+def pageCount(n, p):
+    if p ==1:
+        k=0
+    elif p == n:
+        k = 0
+    elif p== n-1 and n%2!=0:
+        k=0
+    else:
+        i=2
+        while i<n:
+            if i == p or i+1 ==p:
+                c = i//2
+            i = i+2
+
+        if (n%2)!=0:
+            j=n-2
+            while j>0:
+                if j == p or j-1 ==p:
+                    k=(n-j)//2
+                j=j-2
+
+        elif n%2==0:
+            j=n-1
+            while j>0:
+                if j==p or j-1==p:
+                    k = (n-j+1)//2
+                j=j-2
+    if k==0:
+        return k
+    else:
+        if k>c:
+            return c
+        else:
+            return k
